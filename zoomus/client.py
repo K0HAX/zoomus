@@ -21,7 +21,7 @@ COMPONENT_CLASSES = {
         "webinar": components.webinar.WebinarComponent,
     },
     API_VERSION_2: {
-        "contact_center": components.phone.ContactCenterComponentV2,
+        "contact_center": components.contact_center.ContactCenterComponentV2,
         "contacts": components.contacts.ContactsComponentV2,
         "group": components.group.GroupComponentV2,
         "live_stream": components.live_stream.LiveStreamComponentV2,
