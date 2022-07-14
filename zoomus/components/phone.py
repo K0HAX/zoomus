@@ -45,5 +45,5 @@ class PhoneComponentV2(base.BaseComponent):
         return self.get_request("/phone/users", params=kwargs)
 
     def user(self, **kwargs):
-        return self.get_request("/phone/user/{}".format(kwargs.get("userId")), params=kwargs)
+        return self.get_request("/phone/users/{}".format(kwargs.get("userId")), params=kwargs)
 
