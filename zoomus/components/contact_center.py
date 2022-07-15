@@ -34,7 +34,7 @@ class ContactCenterComponentV2(base.BaseComponent):
 
     def address_book_contact_create(self, **kwargs):
         util.require_keys(kwargs, "addressBookId")
-        return self.post_request("/contact_center/address_books/{}/contacts".format(kwargs.get("addressBookId")), params=kwargs)
+        return self.post_request("/contact_center/address_books/{}/contacts".format(kwargs.get("addressBookId")), data=kwargs)
 
     def address_book_contact_update(self, **kwargs):
         util.require_keys(kwargs, "addressBookId")
