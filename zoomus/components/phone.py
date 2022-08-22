@@ -50,3 +50,6 @@ class PhoneComponentV2(base.BaseComponent):
     def get_user_profile(self, **kwargs):
         return self.get_request("/phone/users/{}/settings".format(kwargs.get("userId")), params=kwargs)
 
+    def get_call_handling(self, **kwargs):
+        return self.get_request("/phone/extension/{}/call_handling/settings".format(kwargs.get("extensionId")), params=kwargs)
+
