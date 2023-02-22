@@ -47,6 +47,10 @@ class PhoneComponentV2(base.BaseComponent):
     def user(self, **kwargs):
         return self.get_request("/phone/users/{}".format(kwargs.get("userId")), params=kwargs)
 
+    def user_call_logs(self, **kwargs):
+        util.require_keys(kwargs, "userid")
+        return self.get_request("/phone/users/{}/call_logs".format(kwargs.get("userid")), params=kwargs)
+
     def get_user_profile(self, **kwargs):
         return self.get_request("/phone/users/{}/settings".format(kwargs.get("userId")), params=kwargs)
 
