@@ -57,3 +57,9 @@ class PhoneComponentV2(base.BaseComponent):
     def get_call_handling(self, **kwargs):
         return self.get_request("/phone/extension/{}/call_handling/settings".format(kwargs.get("extensionId")), params=kwargs)
 
+    def get_auto_receptionists(self, **kwargs):
+        return self.get_request("/phone/auto_receptionists", params=kwargs)
+
+    def get_ivr(self, **kwargs):
+        return self.get_request("/phone/auto_receptionists/{}/ivr".format(kwargs.get("autoReceptionistId")), params=kwargs)
+
